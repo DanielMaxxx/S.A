@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './style.css';
+import './Login.css';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -14,12 +14,13 @@ function Login() {
 
   return (
     <>
-    <div className='logo'>
-        <img id='Logo' src="/src/assets/logo.png" alt="" />
-    </div>
-
+    <div className="logo">
+          <img id="Logo" src="/src/assets/logo.png" alt="Logo Sabor Saúde" />
+          
+          
+        </div>
     <div className="login-container">
-      <h2>Faça seu Login</h2>
+      <h2 id='Txt'>Faça seu Login</h2>
       <form onSubmit={handleSubmit}>
         <label>
           Seu e-mail:
