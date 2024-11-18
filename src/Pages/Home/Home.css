@@ -2,16 +2,7 @@
 .home {
     font-family: Arial, sans-serif;
     color: #333;
-  }
-  
-  /* Header */
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #D4A373;
-    padding: 10px 20px;
-    position: relative;
+    background-color: #ffffff;
   }
   
   

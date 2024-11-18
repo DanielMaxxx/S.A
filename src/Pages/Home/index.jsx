@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Home.css';
 import { FaUserCircle, FaSearch, FaHeart } from 'react-icons/fa';
+import Header from '../../Components/Header';
+import Navbar from '../../Components/Navbar';
 
 function Home() {
   const [showProfileModal, setShowProfileModal] = useState(false);
@@ -42,34 +44,11 @@ function Home() {
   return (
     <div className="home">
       {/* Header */}
-      <header className="header">
-        <div className="search-bar">
-           <img id="LogoHome" src="/src/assets/logo.png" alt="Logo Sabor Saúde" />
-          <input type="text" placeholder="O que vamos comer hoje?" />
-          <button id='Botao'><FaSearch /></button>
-          
-        </div>
-        <div className="profile-icon" onClick={handleProfileClick} ref={profileIconRef}>
-          <FaUserCircle />
-        </div>
-        {showProfileModal && (
-          <div className="profile-modal" style={{ top: '50px', right: '20px' }}>
-            {isLoggedIn ? (
-              <button onClick={() => alert('Editar perfil')}>Editar perfil</button>
-            ) : (
-              <button onClick={() => alert('Entre na sua conta')}>Entre na sua conta</button>
-            )}
-          </div>
-        )}
-      </header>
-      
 
-      {/* Navigation */}
-      <nav className="navigation">
-        <button onClick={() => alert('Favoritos')}>FAVORITOS</button>
-        <button ref={recipeButtonRef} onClick={handleRecipeClick}>RECEITAS</button>
-        <button onClick={() => alert('Criar Receita')}>CRIAR RECEITA</button>
-      </nav>
+      <Header />
+
+      <Navbar/>
+
 
       {/* Recipe Cards */}
       <div className="recipes">
@@ -92,17 +71,7 @@ function Home() {
       </div>
 
       {/* Recipe Modal */}
-      {showRecipeModal && (
-        <div className="recipe-modal" style={{ top: '90px', left: '50%' }}>
-          <ul>
-            <li>Doce</li>
-            <li>Salgado</li>
-            <li>Sem glúten</li>
-            <li>Sem lactose</li>
-            <li>Sem açúcar</li>
-          </ul>
-        </div>
-      )}
+      
     </div>
   );
 }

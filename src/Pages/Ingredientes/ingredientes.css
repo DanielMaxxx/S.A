@@ -1,0 +1,46 @@
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-content {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .pizza-image {
+    width: 40%;
+  }
+  
+  .pizza-image img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .content {
+    width: 60%;
+  }
+  
+  .ingredients,
+  .preparation {
+    margin-top: 20px;
+  }
+  
+  .ingredients ul {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+  
+  .ingredients,
+  .preparation {
+    font-size: 16px;
+  }
+  
+  .preparation p {
+    line-height: 1.5;
+  }
+  

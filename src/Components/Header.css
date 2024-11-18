@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffcc99;
+    padding: 10px 20px;
+  }
+  
+  .header .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .logo img {
+    height: 150px;
+  }
+  
+  .header .search-bar {
+    flex-grow: 1;
+    margin: 0 20px;
+    position: relative;
+  }
+  
+  .header .search-bar input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .header .user-icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: inline-block;
+  }
+  
