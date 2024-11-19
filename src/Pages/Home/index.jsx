@@ -82,7 +82,7 @@ function RecipeCard({ name, imageUrl }) {
       {/* Aqui usamos a prop imageUrl */}
       <img src={imageUrl} alt={name} />
       <h3>{name}</h3>
-      <FaHeart className="favorite-icon" />
+      
     </div>
   );
 }

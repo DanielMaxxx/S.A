@@ -42,15 +42,15 @@ export default function Navbar (){
     return (
         <>
         {/* Navigation */}
-      <nav className="navigation">
+      <nav className="navigation" >
       <button onClick={() => alert('Favoritos')}>FAVORITOS</button>
       <button ref={recipeButtonRef} onClick={handleRecipeClick}>RECEITAS</button>
       <button onClick={() => alert('Criar Receita')}>CRIAR RECEITA</button>
     </nav>
 
     {showRecipeModal && (
-        <div className="recipe-modal" style={{ top: '90px', left: '50%' }}>
-          <ul>
+        <div className="recipe-modal" style={{ top: '200px', left: '1037px' }}>
+          <ul>  
             <li>Doce</li>
             <li>Salgado</li>
             <li>Sem glúten</li>

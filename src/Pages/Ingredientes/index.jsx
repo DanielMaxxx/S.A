@@ -13,7 +13,7 @@ const Ingredientes = () => {
     <div className="container">
       <div className="main-content">
         <div className="pizza-image">
-          <img src="src\assets\Lasanha.jpg" alt="Pizza Portuguesa" />
+          <img src="https://i.pinimg.com/736x/1d/28/c5/1d28c51cfab73dfcd0e3fad6824f4e86.jpg" alt="Pizza Portuguesa" />
           <button type="button">Curtir ❤️</button>
         </div>
         <div className="content">
