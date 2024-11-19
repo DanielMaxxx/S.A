@@ -1,11 +1,15 @@
 import React from 'react';
 import './ingredientes.css';
 import Header from '../../Components/Header';
+import Navbar from '../../Components/Navbar';
 
 const Ingredientes = () => {
   return (
     <>
 <Header/>
+<Navbar/>
+
+
     <div className="container">
       <div className="main-content">
         <div className="pizza-image">

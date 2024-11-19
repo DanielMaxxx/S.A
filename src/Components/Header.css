@@ -19,6 +19,7 @@
     flex-grow: 1;
     margin: 0 20px;
     position: relative;
+    margin-right: 40%;
   }
   
   .header .search-bar input[type="text"] {
