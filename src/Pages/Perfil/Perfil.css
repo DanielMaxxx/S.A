@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6e3d1;
+  }
+  
+  .perfil-container {
+    text-align: center;
+    position: relative;
+  }
+  
+  .perfil-header {
+    background-color: #f6e3d1;
+    padding: 20px;
+    border-bottom: 4px solid #4caf50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .voltar-button {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background-color: #e76f51;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .voltar-button:hover {
+    background-color: #ff7f00;
+  }
+  
+  .seta-voltar {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -2px; /* Centraliza visualmente o ícone */
+  }
+  
+  .logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #006400;
+  }
+  
+  .logo p {
+    color: #006400;
+    margin: 0;
+    font-size: 12px;
+  }
+  
+  .perfil-main {
+    padding: 20px;
+    background-color: #ffcc99;
+    color: #fff;
+    
+  }
+  
+  .perfil-card {
+    background-color: #4caf50;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .perfil-image {
+    margin-right: 20px;
+  }
+  
+  .image-placeholder {
+    width: 120px;
+    height: 120px;
+    background-color: #e76f51;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .upload-button {
+    background-color: #fff;
+    color: #006400;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .upload-button:hover {
+    background-color: #ff7f00;
+    color: #fff;
+  }
+  
+  .perfil-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .perfil-field {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .perfil-field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .perfil-field input,
+  .perfil-field textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .salvar-button {
+    background-color: #e76f51;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10%;
+    
+  }
+  
+  .salvar-button:hover {
+    background-color: #ff7f00;
+    color: white;
+  }
+  .logoo{
+    width: 20%;
+  }
+  
+  .perfilnome{
+    font-size: 30px;
+    font-family: "Gasoek One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(58, 29, 9);
+  }

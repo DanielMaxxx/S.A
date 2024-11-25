@@ -68,6 +68,7 @@ function Home() {
         <RecipeCard name="Lasanha" imageUrl="https://i.pinimg.com/736x/00/9a/b9/009ab99f8cb5838605ded510dcd965f6.jpg" />
         <RecipeCard name="Lasanha" imageUrl="https://i.pinimg.com/736x/00/9a/b9/009ab99f8cb5838605ded510dcd965f6.jpg" />
         
+        
       </div>
 
       {/* Recipe Modal */}

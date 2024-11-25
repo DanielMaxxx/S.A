@@ -1,0 +1,132 @@
+/* Estilo geral para a navegação */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px 30px;
+    background: linear-gradient(135deg, #21511b, #427a35);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .navigation:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Estilo para os links de navegação */
+  .nav-button {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #316628;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 50px;
+    border: 2px solid #ffffff; /* Borda branca */
+    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .nav-button:hover {
+    background-color: #427a35;
+    transform: scale(1.05);
+    border-color: #ffffff; /* Borda permanece visível ao passar o mouse */
+  }
+  
+  .nav-button:active {
+    background-color: #103c0d;
+    transform: scale(0.95);
+    border-color: #ffffff; /* Borda visível mesmo quando pressionado */
+  }
+  
+  /* Estilo para o modal de receitas */
+  .recipe-modal {
+    position: absolute;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.4s ease forwards;
+    z-index: 1000;
+    width: 200px;
+  }
+  
+  .recipe-modal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .recipe-modal li {
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #21511b;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s ease;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .recipe-modal li:last-child {
+    border-bottom: none;
+  }
+  
+  .recipe-modal li:hover {
+    background-color: #f0f0f0;
+    color: #316628;
+    font-weight: 600;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .navigation {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 15px;
+    }
+  
+    .nav-button {
+      flex: 1 1 100%;
+      text-align: center;
+      padding: 12px;
+      font-size: 16px;
+    }
+  
+    .recipe-modal {
+      width: 85%;
+      left: 7.5%;
+      top: 20%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navigation {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .nav-button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+  
+  /* Animação do modal */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  

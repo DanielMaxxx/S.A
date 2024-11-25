@@ -1,56 +1,52 @@
-import {useState, useEffect, useRef} from 'react'
+import { Link } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+import './Navbar.css';
 
 
-export default function Navbar (){
+export default function Navbar() {
+  const [showRecipeModal, setShowRecipeModal] = useState(false);
+  const recipeButtonRef = useRef(null);
 
-    const [showProfileModal, setShowProfileModal] = useState(false);
-    const [showRecipeModal, setShowRecipeModal] = useState(false);
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-    
-    const profileIconRef = useRef(null);
-    const recipeButtonRef = useRef(null);
-  
-    const handleProfileClick = () => {
-      setShowProfileModal(!showProfileModal);
+  const handleRecipeClick = () => {
+    setShowRecipeModal(!showRecipeModal);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        recipeButtonRef.current &&
+        !recipeButtonRef.current.contains(event.target)
+      ) {
+        setShowRecipeModal(false);
+      }
     };
-  
-    const handleRecipeClick = () => {
-      setShowRecipeModal(!showRecipeModal);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
     };
-  
-    useEffect(() => {
-      const handleClickOutside = (event) => {
-        if (
-          profileIconRef.current &&
-          !profileIconRef.current.contains(event.target)
-        ) {
-          setShowProfileModal(false);
-        }
-        if (
-          recipeButtonRef.current &&
-          !recipeButtonRef.current.contains(event.target)
-        ) {
-          setShowRecipeModal(false);
-        }
-      };
-      document.addEventListener('mousedown', handleClickOutside);
-      return () => {
-        document.removeEventListener('mousedown', handleClickOutside);
-      };
-    }, []);
-  
-    return (
-        <>
-        {/* Navigation */}
-      <nav className="navigation" >
-      <button onClick={() => alert('Favoritos')}>FAVORITOS</button>
-      <button ref={recipeButtonRef} onClick={handleRecipeClick}>RECEITAS</button>
-      <button onClick={() => alert('Criar Receita')}>CRIAR RECEITA</button>
-    </nav>
+  }, []);
 
-    {showRecipeModal && (
-        <div className="recipe-modal" style={{ top: '200px', left: '1037px' }}>
-          <ul>  
+  return (
+    <>
+      <nav className="navigation">
+        <Link to="/favoritos" className="nav-button">
+          FAVORITOS
+        </Link>
+        <button
+          ref={recipeButtonRef}
+          onClick={handleRecipeClick}
+          className="nav-button"
+        >
+          RECEITAS
+        </button>
+        <Link to="EnviarReceita" className="nav-button">
+          CRIAR RECEITA
+        </Link>
+      </nav>
+
+      {showRecipeModal && (
+        <div className="recipe-modal" style={{ top: "17%", left: "49%" }}>
+          <ul>
             <li>Doce</li>
             <li>Salgado</li>
             <li>Sem glúten</li>
@@ -59,6 +55,6 @@ export default function Navbar (){
           </ul>
         </div>
       )}
-        </>
-    )
+    </>
+  );
 }
