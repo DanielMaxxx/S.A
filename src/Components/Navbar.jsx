@@ -32,6 +32,7 @@ export default function Navbar() {
         <Link to="/favoritos" className="nav-button">
           FAVORITOS
         </Link>
+        
         <button
           ref={recipeButtonRef}
           onClick={handleRecipeClick}
@@ -39,7 +40,8 @@ export default function Navbar() {
         >
           RECEITAS
         </button>
-        <Link to="EnviarReceita" className="nav-button">
+
+        <Link to="/NovaReceita" className="nav-button">
           CRIAR RECEITA
         </Link>
       </nav>

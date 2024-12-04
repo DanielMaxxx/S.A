@@ -4,9 +4,9 @@ import Home from './Pages/Home';
 import Cadastro from './Pages/Cadastro';
 import Login from './Pages/Login';
 import Ingredientes from './Pages/Ingredientes';
-import EnviarReceita from './Pages/EnviarReceita'; // Componente correto
-import Perfil from './Pages/Perfil'; 
-
+import NovaReceita from './Pages/NovaReceita';
+import Perfil from './Pages/Perfil'; // Importando o componente Perfil
+import Favoritos from './Pages/Favoritos'; // Importando o componente Favoritos corretamente
 
 function App() {
   return (
@@ -16,9 +16,9 @@ function App() {
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Ingredientes" element={<Ingredientes />} />
-        <Route path="/EnviarReceita" element={<EnviarReceita />} />
+        <Route path="/NovaReceita" element={<NovaReceita />} />
+        <Route path="/Favoritos" element={<Favoritos />} />
         <Route path="/Perfil" element={<Perfil />} />
-        
       </Routes>
     </Router>
   );

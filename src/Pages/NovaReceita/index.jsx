@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './Receita.css'; // Certifique-se de criar um arquivo CSS correspondente
+import './NovaReceita.css'; // Certifique-se de criar um arquivo CSS correspondente
 import Header from '../../Components/Header';
 import Navbar from '../../Components/Navbar';
 
-const EnviarReceita = () => {
+const NovaReceita = () => {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [ingredients, setIngredients] = useState('');
@@ -193,4 +193,8 @@ const EnviarReceita = () => {
     );
 };
 
-export default EnviarReceita;
+export default NovaReceita;
+
+
+
+
