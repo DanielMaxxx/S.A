@@ -39,8 +39,28 @@ app.get('/', (req, res) => {
 // Porta do servidor
 const PORT = process.env.PORT || 5000;
 
-// Iniciar servidor
-app.listen(PORT, async () => {
-  await startServer();
-  console.log(`Servidor rodando na porta ${PORT}`);
-});
+// Iniciar servidor com tratamento de erro
+const startApp = (port) => {
+  const server = app.listen(port, async () => {
+    try {
+      await startServer();
+      console.log(`Servidor rodando na porta ${port}`);
+    } catch (err) {
+      console.error('Erro ao iniciar servidor:', err.message);
+      process.exit(1);
+    }
+  });
+
+  server.on('error', (err) => {
+    if (err.code === 'EADDRINUSE') {
+      console.error(`Porta ${port} já está em uso. Tentando outra porta...`);
+      startApp(port + 1); // Tentar porta seguinte
+    } else {
+      console.error('Erro no servidor:', err.message);
+      process.exit(1);
+    }
+  });
+};
+
+// Iniciar aplicação
+startApp(PORT);

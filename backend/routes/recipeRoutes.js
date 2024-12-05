@@ -1,6 +1,6 @@
 const express = require('express');
-const { createRecipe, getRecipes } = require('../controllers/RecipeController');
-const authenticate = require('../middlewares/authenticate'); // Middleware para verificar o JWT
+const { createRecipe, getRecipes, addFavorite, removeFavorite, getFavorites} = require('../controllers/RecipeController');
+const authenticate = require('../middleware/authMiddleware'); // Middleware para verificar o JWT
 const router = express.Router();
 
 router.post('/', authenticate, createRecipe);
